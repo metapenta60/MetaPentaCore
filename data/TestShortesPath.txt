@@ -1,0 +1,5 @@
+M_23cgmp_c,M_h2o_p,M_23dappa_p,M_2dhguln_c,M_nadph_c,M_atp_c
+M_6pgc_c 
+6-Phospho-D-gluconate cytosol
+2',3'-Cyclic GMP- Periplas
+

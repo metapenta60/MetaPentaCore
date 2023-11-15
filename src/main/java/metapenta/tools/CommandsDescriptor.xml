@@ -1,0 +1,7 @@
+<software name="MetaPeNTA" version="0.0.1" date="5-11-2023" jar="MetaPenta">
+    <title>Metabolic Petri Nets</title>
+
+    <commandgroup id="Reads">
+        De-novo and reference guided reads processing
+    </commandgroup>
+</software>

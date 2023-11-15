@@ -1,0 +1,13 @@
+/.metadata/
+/MetabolicNetworks/bin
+/bin/
+.idea
+MetaPeNTA.iml
+/classes
+<<<<<<< Updated upstream
+*.class
+/target/*
+
+=======
+*.class
+>>>>>>> Stashed changes

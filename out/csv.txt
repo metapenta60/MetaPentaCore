@@ -1,0 +1,74 @@
+2 oxoglutarate reversible transport via symport,1
+2-Oxogluterate dehydrogenase,1
+6-phosphogluconolactonase,1
+ATP maintenance requirement,1
+ATP synthase (four protons for one ATP),1
+Acetaldehyde dehydrogenase (acetylating),1
+Acetaldehyde reversible transport,1
+Acetate kinase,1
+Acetate reversible transport via proton symport,1
+Aconitase (half-reaction A, Citrate hydro-lyase),1
+Aconitase (half-reaction B, Isocitrate hydro-lyase),1
+Adenylate kinase,1
+Alcohol dehydrogenase (ethanol),1
+Ammonia reversible transport,1
+Biomass Objective Function with GAM,1
+CO2 transporter via diffusion,1
+Citrate synthase,1
+Cytochrome oxidase bd (ubiquinol-8: 2 protons),1
+D lactate transport via proton symport,1
+D-glucose transport via PEP:Pyr PTS,1
+D-lactate dehydrogenase,1
+Enolase,1
+Ethanol reversible transport via proton symport,1
+Formate transport in via proton symport,1
+Formate transport via diffusion,1
+Fructose transport via PEP:Pyr PTS (f6p generating),1
+Fructose-bisphosphatase,1
+Fructose-bisphosphate aldolase,1
+Fumarase,1
+Fumarate reductase,1
+Fumarate transport via proton symport (2 H),1
+Glucose 6-phosphate dehydrogenase,1
+Glucose-6-phosphate isomerase,1
+Glutamate dehydrogenase (NADP),1
+Glutamate synthase (NADPH),1
+Glutaminase,1
+Glutamine synthetase,1
+Glyceraldehyde-3-phosphate dehydrogenase,1
+H2O transport via diffusion,1
+Isocitrate dehydrogenase (NADP),1
+Isocitrate lyase,1
+L glutamate transport via proton symport  reversible,1
+L-glutamine transport via ABC system,1
+Malate dehydrogenase,1
+Malate synthase,1
+Malate transport via proton symport (2 H),1
+Malic enzyme (NAD),1
+Malic enzyme (NADP),1
+NAD transhydrogenase,1
+NAD(P) transhydrogenase,1
+NADH dehydrogenase (ubiquinone-8 & 3 protons),1
+O2 transport  diffusion ,1
+Phosphate reversible transport via symport,1
+Phosphoenolpyruvate carboxykinase,1
+Phosphoenolpyruvate carboxylase,1
+Phosphoenolpyruvate synthase,1
+Phosphofructokinase,1
+Phosphogluconate dehydrogenase,1
+Phosphoglycerate kinase,1
+Phosphoglycerate mutase,1
+Phosphotransacetylase,1
+Pyruvate dehydrogenase,1
+Pyruvate formate lyase,1
+Pyruvate kinase,1
+Pyruvate transport in via proton symport,1
+Ribose-5-phosphate isomerase,1
+Ribulose 5-phosphate 3-epimerase,1
+Succinate dehydrogenase (irreversible),1
+Succinate transport out via proton antiport,1
+Succinate transport via proton symport (2 H),1
+Succinyl-CoA synthetase (ADP-forming),1
+Transaldolase,1
+Transketolase,1
+Triose-phosphate isomerase,1

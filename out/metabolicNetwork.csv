@@ -1,0 +1,7 @@
+source,target,interaction,directed,symbol,value
+TTM_acon_C_c,R_ACONTb,PP,TRUE,abc540,1.234
+TTM_h2o_c,R_ACONTb,PP,TRUE,abc540,1.234
+R_ACONTb,M_icit_c,PP,TRUE,abc540,1.234
+M_icit_c,R_ICL,PP,TRUE,abc540,1.234
+R_ICL,M_glx_c,PP,TRUE,abc540,1.234
+R_ICL,OOM_succ_c,PP,TRUE,abc540,1.234

@@ -1,0 +1,1 @@
+./data/e_coli_core.xml G_b2463 Reactions_M_ac_c

@@ -1,0 +1,4 @@
+{sinks:[{"id": "M_13dpg_c", "name":"3-Phospho-D-glyceroyl phosphate"}
+,{"id": "M_actp_c", "name":"Acetyl phosphate"},
+{"id": "M_for_c", "name":"Formate"},
+{"id": "M_succoa_c", "name":"Succinyl-CoA"}]}

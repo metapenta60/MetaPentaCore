@@ -1,0 +1,1 @@
+./data/e_coli_core.xml M_acon_C_c,M_h2o_c,M_nadp_c M_akg_c allPaths.ctxt
