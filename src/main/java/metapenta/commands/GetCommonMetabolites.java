@@ -6,18 +6,12 @@ import java.nio.file.Paths;
 import java.util.List;
 
 import metapenta.model.MetabolicNetwork;
-import metapenta.model.MetabolicNetworkXMLLoader;
 import metapenta.model.Metabolite;
+import metapenta.tools.io.MetabolicNetworkXMLFileLoader;
 
-/**
- * Returns the common metabolites of two differente metabolic networks
- * @param args[0] path of XML file metbolic network 1
- * @param args[0] path of XML file metbolic network 2
- * @author vparrac
- */
 public class GetCommonMetabolites {
 	public static void main(String[] args) throws IOException {
-		MetabolicNetworkXMLLoader loader = new MetabolicNetworkXMLLoader();
+		MetabolicNetworkXMLFileLoader loader = new MetabolicNetworkXMLFileLoader();
 		MetabolicNetwork network1 = loader.loadNetwork(args[0]);
 		MetabolicNetwork network2 = loader.loadNetwork(args[1]);
 		

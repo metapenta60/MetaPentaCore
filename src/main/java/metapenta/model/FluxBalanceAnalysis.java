@@ -1,9 +1,9 @@
 package metapenta.model;
 
-import metapenta.petrinet2.Edge;
-import metapenta.petrinet2.Transition;
-import metapenta.petrinet2.PetriNet;
-import metapenta.petrinet2.Place;
+import metapenta.petrinet.Edge;
+import metapenta.petrinet.Transition;
+import metapenta.petrinet.PetriNet;
+import metapenta.petrinet.Place;
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.optim.*;
