@@ -1,43 +1,23 @@
 package metapenta.petrinet;
-/**
- * Represents a edge of the petri net
- * @author Valerie Parra Cortés
- *
- */
-public class Edge <O> {
-	/**
-	 * The stoichiometry of the metabolite
-	 */
-	private double tokens;
 
-	/**
-	 * The object of the edge
-	 */
-	private O object;
+public class Edge<Target>{
+    private Target target;
+    private double weight;
+    public Edge(Target target, double weight) {
+        this.target = target;
+        this.weight = weight;
+    }
+    public Target getTarget() {
+        return target;
+    }
+    public double getWeight() {
+        return weight;
+    }
+    public void setTarget(Target target){
+         this.target = target;
+    }
+    public void setWeight(int weight){
+        this.weight = weight;
+    }
 
-	
-	public Edge(double tokens, O object) {		
-		this.tokens = tokens;			
-		this.object=object;
-		
-	}
-	/**
-	 * @return the stoichiometry of the edge
-	 */
-	public double getStoichiometry() {
-		return tokens;
-	}	
-	/**
-	 * This method changes the stoichiometry of the Edge  
-	 * @param number
-	 */
-	public void setStoichiometry(int number) {
-		this.tokens = number;
-	}			
-	/**
-	* @return the metabolite of edge
-	 */
-	public O getObject() {
-		return object;
-	}
 }

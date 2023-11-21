@@ -1,4 +1,4 @@
-package metapenta.petrinet2;
+package metapenta.petrinet;
 
 import metapenta.model.Metabolite;
 import metapenta.model.Reaction;

@@ -5,8 +5,9 @@ import java.io.PrintStream;
 import java.util.List;
 
 import metapenta.model.MetabolicNetwork;
-import metapenta.model.MetabolicNetworkXMLLoader;
 import metapenta.model.Reaction;
+import metapenta.tools.io.MetabolicNetworkXMLFileLoader;
+
 /**
  * Method that gived a Enzyme ID print a JSON with the information of reactions
  * where Enzyme is required
@@ -62,7 +63,7 @@ public class GetReactionsCatalyzedBy {
 	 * @throws Exception if exists any error of I/O
 	 */
 	public static void main(String[] args) throws IOException  {
-		MetabolicNetworkXMLLoader loader = new MetabolicNetworkXMLLoader();
+		MetabolicNetworkXMLFileLoader loader = new MetabolicNetworkXMLFileLoader();
 		MetabolicNetwork network = loader.loadNetwork(args[0]);
 		List<Reaction> result = network.getReactionsCatalyzedBy(args[1]);
 		try (PrintStream out = new PrintStream(args[2])) {

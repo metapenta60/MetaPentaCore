@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 import metapenta.model.MetabolicNetwork;
-import metapenta.model.MetabolicNetworkXMLLoader;
 import metapenta.model.Reaction;
+import metapenta.tools.io.MetabolicNetworkXMLFileLoader;
 
 /**
  * Method that gived a metabolite ID print a JSON with the information of reactions
@@ -75,7 +75,7 @@ import metapenta.model.Reaction;
     }
   ]
 }
- @author Valerie Parra Cortés
+ @author Valerie Parra Cortï¿½s
  *
  */
 public class ReactionsOfMetabolite {
@@ -87,7 +87,7 @@ public class ReactionsOfMetabolite {
 	 * @throws Exception if exists any error of I/O
 	 */
 	public static void main(String[] args) throws Exception {
-		MetabolicNetworkXMLLoader loader = new MetabolicNetworkXMLLoader();
+		MetabolicNetworkXMLFileLoader loader = new MetabolicNetworkXMLFileLoader();
 		MetabolicNetwork network = loader.loadNetwork(args[0]);
 		//network.makeGraph();
 		Map<String,List<Reaction>> reactions= network.getReactionOfMetabolite(args[1]);

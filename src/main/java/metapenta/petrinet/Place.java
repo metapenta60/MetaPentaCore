@@ -1,101 +1,76 @@
 package metapenta.petrinet;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import metapenta.model.Metabolite;
-/**
- * This class representate a Place of Petri net
- * @author Valerie Parra
- */
+public class Place<O> {
+    public static final String SINK = "SINK";
+    public static final String SOURCE = "SOURCE";
+    private String Id;
+    private String label;
+    private O object;
+    List<Edge<?>> edgesIn;
+    List<Edge<?>> edgesOut;
 
-public class Place <PlaceObjectClass,TransitionsObjectClass>{
-	/**
-	 * The object of the place
-	 */
-	private PlaceObjectClass object;
-	
-	/**
-	 * The list of transitions where the metabolite is reactant
-	 */
-	private List<Edge<Transition<PlaceObjectClass, TransitionsObjectClass>>> inTransitions;
-	private List<Edge<Transition<PlaceObjectClass, TransitionsObjectClass>>> outTransitions;
-	
-	/**
-	 * Number of metabolite
-	 */	
-	private int metaboliteNumber;
+    public Place(String id, String label, O object) {
+        Id = id;
+        this.label = label;
+        this.object = object;
+        this.edgesIn = new ArrayList<>();
+        this.edgesOut = new ArrayList<>();
+    }
+    public void setLabel(String label) {
+        this.label = label;
+    }
+    public void setId(String ID) {
+        this.Id = ID;
+    }
+    public void setObject(O object){
+        this.object = object;
+    }
 
-	/**
-	 * Constuctor of place clase
-	 * @param metabolite of the place
-	 * @param numberMetabolite the number of metabolite in Petri net
-	 */
-	public Place(PlaceObjectClass object , int numberMetabolite) {
-		this.object= object;
-		this.metaboliteNumber= numberMetabolite;		
-		this.inTransitions = new ArrayList<Edge<Transition<PlaceObjectClass,TransitionsObjectClass>>>();
-		this.outTransitions = new ArrayList<Edge<Transition<PlaceObjectClass,TransitionsObjectClass>>>();
-	}
-	
-	
-	/**
-	 * Add a transition to place
-	 * @param t the new transition
-	 */
+    public O getObject() {
+       return object;
+    }
+    public String getLabel() {
+        return label;
+    }
 
-	public void addInTransition(Edge<Transition<PlaceObjectClass, TransitionsObjectClass>> t) {
-		inTransitions.add(t);
-	}
-	
-	/**
-	 * Add a transition where the current metabolite is a reactant
-	 * @param t
-	 */
-	public void addOutTransition(Edge<Transition<PlaceObjectClass, TransitionsObjectClass>> t) {
-		outTransitions.add(t);
-	}
-	
-	/**
-	 * Returns the list of outler reactions or "transitions"
-	 * @return the outlet transition
-	 */
+    public List<Edge<?>> getEdgesIn() {
+        return edgesIn;
+    }
 
-	public List<Edge<Transition<PlaceObjectClass,TransitionsObjectClass>>> getInTransitions() {
-		return inTransitions;
-	}
+    public List<Edge<?>> getEdgesOut() {
+        return edgesOut;
+    }
 
-	
-	/**
-	 * Returns the list of outler reactions or "transitions"
-	 * @return the outlet transition
-	 */
+    public String getID() {
+        return Id;
+    }
+    public O getAttributes() {
+        return object;
+    }
+    public void AddEdgeIn(Edge transition){
+        this.edgesIn.add(transition);
+    }
+    public void AddEdgeOut(Edge transition){
+        this.edgesOut.add(transition);
+    }
 
-	public List<Edge<Transition<PlaceObjectClass,TransitionsObjectClass>>> getOutTransitions() {
-		return outTransitions;
-	}
+    public boolean isStatus(String status){
+        return switch (status) {
+            case SINK -> isSource();
+            case SOURCE -> isSink();
+            default -> false;
+        };
+    }
 
-	
-	/**
-	 * Method that returns the number of the places in petri net
-	 * @return numberMetabolite in petri net
-	 */
-	public int getMetaboliteNumber() {
-		return metaboliteNumber;
-	}
+    public boolean isSource(){
+        return edgesIn.isEmpty();
+    }
 
-	/**
-	 * Returns the of the place
-	 * @return the metabolite
-	 */		
-	public PlaceObjectClass getObject() {
-		return object;
-	}
-	
-	/**
-	 * Change Number of metabolite in the petri net
-	 * @param numberMetabolite
-	 */
-	public void setMetaboliteNumber(Integer numberMetabolite) {
-		this.metaboliteNumber = numberMetabolite;
-	}
+    public boolean isSink(){
+        return edgesOut.isEmpty();
+    }
+
 }

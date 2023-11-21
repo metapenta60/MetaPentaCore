@@ -1,20 +1,20 @@
 package metapenta.model;
 
-import metapenta.petrinet2.Edge;
-import metapenta.petrinet2.Place;
-import metapenta.petrinet2.Transition;
-import metapenta.petrinet2.PetriNet;
+import metapenta.petrinet.Edge;
+import metapenta.petrinet.Place;
+import metapenta.petrinet.Transition;
+import metapenta.petrinet.PetriNet;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MetaPenta implements IMetaPenta{
-    private MetabolicNetworkXMLLoader loader;
+    private MetabolicNetworkXMLFileLoader loader;
     private PetriNet petriNet;
     public MetaPenta(String networkFile){
         try {
-            loader = new MetabolicNetworkXMLLoader();
+            loader = new MetabolicNetworkXMLFileLoader();
             petriNet = new PetriNet();
             MetabolicNetwork network = loader.loadNetwork(networkFile);
             loadPetriNet(network);

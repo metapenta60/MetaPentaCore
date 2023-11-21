@@ -3,10 +3,10 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.List;
 import metapenta.model.MetabolicNetwork;
-import metapenta.model.MetabolicNetworkXMLLoader;
 import metapenta.model.Metabolite;
 import metapenta.model.Reaction;
 import metapenta.model.ReactionComponent;
+import metapenta.tools.io.MetabolicNetworkXMLFileLoader;
 
 
 public class GapFindGams {
@@ -19,7 +19,7 @@ public class GapFindGams {
 	
 	
 	public static void main(String[] args) throws IOException {
-		MetabolicNetworkXMLLoader loader = new MetabolicNetworkXMLLoader();
+		MetabolicNetworkXMLFileLoader loader = new MetabolicNetworkXMLFileLoader();
 		MetabolicNetwork network = loader.loadNetwork(args[0]);
 		List<Metabolite> metabolites = network.getMetabolitesAsList();
 		PrintStream compounds = new PrintStream("compounds.txt") ;

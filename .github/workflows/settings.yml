@@ -14,6 +14,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish package
         run: mvn --batch-mode deploy
         env:
